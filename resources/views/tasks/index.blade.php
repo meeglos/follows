@@ -4,16 +4,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="page-header" style="margin-top: 11px;">
-                    <h3 style="margin-top: 11px;">Registro de emisión</h3>
+                <div>
+                    <span class="mr-page-header">Registro de emisión</span>
                         {{--&because;<span class="rotsign">&because;</span>&nbsp;&nbsp;<small> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at aut blanditiis.</small></h3>--}}
                 </div>
             </div>
             <div class="col-md-9">
+
+                <a role="button" class="btn btn-sm btn-danger pull-right btn-mr-sp" href="create" aria-label="Left Align">Agregar registro
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </a>
                 <!-- Split button -->
-                <div class="btn-group pull-right">
+                <div class="btn-group btn-group-sm pull-right btn-mr-sp">
                     <button type="button" class="btn btn-info">Ordenar</button>
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-info  btn-smdropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
@@ -24,9 +28,9 @@
                         <li><a href="#">Sin seguimiento</a></li>
                     </ul>
                 </div>
-                <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-info">Agrupar</button>
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="btn-group btn-group-sm pull-right">
+                    <button type="button" class="btn btn-info btn-sm">Agrupar</button>
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
@@ -39,12 +43,9 @@
                     </ul>
                 </div>
 
-                <a role="button" class="btn btn-danger pull-right" href="create" aria-label="Left Align">Agregar registro
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </a>
             </div>
         </div>
-
+        <hr>
         @if(count($tasks) > 0)
             @foreach($tasks as $task)
                 <div class="panel panel-default" style="margin-bottom: 5px;">

@@ -146,3 +146,26 @@
 .tag-bg-ko {
     background-color: #BB0000;
 }
+.tt-main {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.1em;
+}
+.tt-title {
+    color: #00f5f5;
+    font-size: 1em;
+}
+.tt-details {
+    color: #f0fefa;
+    font-size: 1em;
+}
+
+.btn-mr-sp {
+    margin-left: .5em;
+}
+.mr-page-header {
+    /*margin-bottom: 5em;*/
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}

@@ -52,10 +52,10 @@ class Task extends Model
 
     public function getTooltipAttribute()
     {
-        return $this->description .
-                '<br><span class="follow-author">Persona contacto: </span>' . $this->client_name .
-                '<br><span class="follow-author">Teléfono contacto: </span>' . $this->client_phone .
-                '<br><span class="follow-author">Registrado el: </span>' . $this->full_fecha;
+        return '<span class="tt-main">' . $this->description . '</span>' .
+                '<br><span class="tt-main tt-title">Persona contacto: </span><span class="tt-main tt-details">' . $this->client_name . '</span>' .
+                '<br><span class="tt-main tt-title">Teléfono contacto: </span><span class="tt-main tt-details">' . $this->client_phone . '</span>' .
+                '<br><span class="tt-main tt-title">Registrado el: </span><span class="tt-main tt-details">' . $this->full_fecha . '</span>';
     }
     public function getFechaAttribute()
     {
