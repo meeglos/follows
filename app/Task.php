@@ -5,6 +5,7 @@ namespace App;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Jenssegers\Date\Date;
 
 class Task extends Model
 {
@@ -46,12 +47,32 @@ class Task extends Model
     public function getDifAttribute()
     {
         Carbon::setLocale('es');
-        $difference = $this->created_at->diffForHumans();
-        return $difference;
+        return $this->created_at->diffForHumans();
     }
 
     public function getTooltipAttribute()
     {
-        return '<span class="follow-author">' . $this->description . '</span> <br><u>Persona contacto</u>: ' . $this->client_name . ' <br>  <u>Teléfono contacto</u>:  ' . $this->client_phone;
+        return $this->description .
+                '<br><span class="follow-author">Persona contacto: </span>' . $this->client_name .
+                '<br><span class="follow-author">Teléfono contacto: </span>' . $this->client_phone .
+                '<br><span class="follow-author">Registrado el: </span>' . $this->full_fecha;
+    }
+    public function getFechaAttribute()
+    {
+        Carbon::setLocale('es');
+        return $this->created_at->diffForHumans();
+    }
+    public function getFullFechaAttribute()
+    {
+        Carbon::setLocale('es');
+        return $this->created_at->format('d.m.Y') . ' a las ' . $this->created_at->format('H:i:s');
+    }
+
+    public function getStatusAttribute()
+    {
+        if ($this->pending)
+            return '<h6 class="label tag-bg tag-bg-ko">Pendiente</h6>';
+        else
+            return '<h6 class="label tag-bg tag-bg-ok">Finalizado</h6>';
     }
 }

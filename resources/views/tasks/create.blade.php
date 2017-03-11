@@ -28,10 +28,17 @@
                                 {!! Field::text('client_phone', ['label' => 'Teléfono', 'placeholder' => 'Teléfono de contacto']) !!}
                             </div>
                             <div class="col-md-6">
-                                {!! Field::text('client_contact', ['label' => 'Contactar', 'placeholder' => 'Fecha y hora de contacto']) !!}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {!! Field::date('client_contact', ['label' => 'Fecha de contacto', 'placeholder' => 'Fecha y hora de contacto']) !!}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {!! Field::time('client_contact', ['label' => 'Hora de contacto', 'placeholder' => 'Fecha y hora de contacto']) !!}
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                {!! Field::select('category[]', $tags,  null, ['id' => 'tag_list', 'label' => 'Categoría', 'multiple']) !!}
+                                {!! Field::select('category[]', $tags,  null, ['id' => 'tag_list', 'multiple', 'label' => 'Categoría']) !!}
                             </div>
                             <div class="col-md-12">
                                 {!! Field::textarea('description', ['label' => 'Motivo llamada', 'rows' => '3', 'placeholder' => 'Descripción del motivo de llamada']) !!}
@@ -40,12 +47,9 @@
                                 {!! Form::submit('Guardar', ['class'=> 'btn btn-primary form-control']) !!}
                             </div>
                         {!! Form::close() !!}
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-                        <script>$('#tag_list').select2({ placeholder: 'DESelecciona una categoría' });</script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{--<script>$('#tag_list').select2({ placeholder: 'Selecciona una categoría' });</script>--}}
 @endsection

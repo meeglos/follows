@@ -36,4 +36,18 @@ class User extends Authenticatable
     {
         return $this->hasMany(Tag::class);
     }
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function post(Post $post, $comment)
+    {
+        $post = new Post([
+           'comments'   => $comment,
+            'task_id'   => $post->id,
+        ]);
+
+        $this->posts()->save($post);
+    }
 }

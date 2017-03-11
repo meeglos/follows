@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "caouecs/laravel-lang": "~3.0",
         "graham-campbell/markdown": "^7.1",
+        "jenssegers/date": "^3.2",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "styde/html": "~1.3"

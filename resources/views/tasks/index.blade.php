@@ -3,12 +3,42 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-3">
                 <div class="page-header" style="margin-top: 11px;">
-                    <h3 style="margin-top: 11px;">Registro de emisión &because;&nbsp;<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at aut blanditiis.</small></h3>
+                    <h3 style="margin-top: 11px;">Registro de emisión</h3>
+                        {{--&because;<span class="rotsign">&because;</span>&nbsp;&nbsp;<small> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at aut blanditiis.</small></h3>--}}
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-9">
+                <!-- Split button -->
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-info">Ordenar</button>
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Más antiguos</a></li>
+                        <li><a href="#">Más recientes</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Sin seguimiento</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-info">Agrupar</button>
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Esta semana</a></li>
+                        <li><a href="#">Este mes</a></li>
+                        <li><a href="#">Resúmen por semanas</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Limpiar filtros</a></li>
+                    </ul>
+                </div>
+
                 <a role="button" class="btn btn-danger pull-right" href="create" aria-label="Left Align">Agregar registro
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </a>
@@ -20,10 +50,11 @@
                 <div class="panel panel-default" style="margin-bottom: 5px;">
                     <div class="panel-body" style="padding-top: 8px; padding-bottom: 8px;">
                         <a href="{{ $task->url }}" data-toggle="tooltip" data-html="true" data-placement="bottom" title="{{ $task->tooltip }}">
-                            {{ str_limit($task->description, 80) }} | <b style="color: #2d760c;">Creado por: <u>{{ $task->user->name }}</u></b> {{ $task->dif }}
+                            {{ str_limit($task->description, 80) }} &nbsp;&bullet;&nbsp; Creado por {{ $task->user->name }} {{ $task->dif }}
                         </a>
                         <span class="badge">{{ $task->count }}</span>
-                        <span class="label label-info pull-right" style="padding: 5px 10px; font-size: .8em; font-weight: 100;">Pendiente</span>
+                        <span class="pull-right">{!! $task->status !!}</span>
+
                     </div>
                 </div>
             @endforeach

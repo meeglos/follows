@@ -53,9 +53,13 @@ class TaskController extends Controller
      * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function show(Task $task)
+    public function show(Task $task, $slug)
     {
-        //
+        if ($task->slug != $slug) {
+            return redirect($task->url, 301);
+        }
+
+        return view('tasks.show', compact('task'));
     }
 
     /**
