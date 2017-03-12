@@ -16,19 +16,23 @@
                 </a>
                 <!-- Split button -->
                 <div class="btn-group btn-group-sm pull-right btn-mr-sp">
-                    <button type="button" class="btn btn-info">Ordenar</button>
+                    <button type="button" class="btn btn-info">Mostrar</button>
                     <button type="button" class="btn btn-info  btn-smdropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Más antiguos</a></li>
-                        <li><a href="#">Más recientes</a></li>
+                        <li><a href="#">Más antiguos primero</a></li>
+                        <li><a href="#">Más recientes primero</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Pendientes</a></li>
+                        <li><a href="#">Finalizados</a></li>
+                        <li><a href="#">Todos</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Sin seguimiento</a></li>
                     </ul>
                 </div>
-                <div class="btn-group btn-group-sm pull-right">
+                <div class="btn-group btn-group-sm pull-right btn-mr-sp">
                     <button type="button" class="btn btn-info btn-sm">Agrupar</button>
                     <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
@@ -42,7 +46,10 @@
                         <li><a href="#">Limpiar filtros</a></li>
                     </ul>
                 </div>
-
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" id="basic-addon1">Buscar</span>
+                    <input type="text" class="form-control" placeholder="Inserta el contenido de tu búsqueda" aria-describedby="basic-addon1">
+                </div>
             </div>
         </div>
         <hr>
