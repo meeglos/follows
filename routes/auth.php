@@ -30,3 +30,7 @@ Route::get('tags/index', [
     'uses' => 'TagController@index',
     'as' => 'tags.index',
 ]);
+
+Route::get('skills', function () {
+    return ['Laravel', 'Vue', 'PHP', 'JavaScript', 'Tooling'];
+});

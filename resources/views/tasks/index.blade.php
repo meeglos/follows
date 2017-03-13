@@ -53,6 +53,13 @@
             </div>
         </div>
         <hr>
+        {{--<div id="app-root">--}}
+            {{--<div class="tabs is-centered is-medium">--}}
+                {{--<ul>--}}
+                    {{--<li v-for="skill in skills"><a>@{{ skill }}</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         @if(count($tasks) > 0)
             @foreach($tasks as $task)
                 <div class="panel panel-default" style="margin-bottom: 5px;">
@@ -62,7 +69,7 @@
                         </a>
                         <span class="badge">{{ $task->count }}</span>
                         <span class="pull-right">{!! $task->status !!}</span>
-
+                        <span class="label-info">{{ $task->user->name }} lo está revisando.</span>
                     </div>
                 </div>
             @endforeach

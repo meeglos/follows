@@ -149,15 +149,15 @@
 .tt-main {
     font-family: 'Open Sans Condensed', sans-serif;
     letter-spacing: 0.05em;
-    font-size: 1.1em;
+    font-size: .9em;
 }
 .tt-title {
     color: #00f5f5;
-    font-size: 1em;
+    font-size: .8em;
 }
 .tt-details {
     color: #f0fefa;
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .btn-mr-sp {

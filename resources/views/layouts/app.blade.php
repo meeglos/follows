@@ -11,12 +11,12 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    {{--<link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css') }}" rel="stylesheet">--}}
-    {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="/css/my-css.css" rel="stylesheet">
     <link href="/css/my-css-tooltip.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.css" integrity="sha256-2W7D1+BaVS4IyQ/jHh9Z97iKyfTY0IdVP+GLoD8Zfi8=" crossorigin="anonymous" />    <link href="/css/app.css" rel="stylesheet">--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -92,11 +92,12 @@
 
     {{--scripts--}}
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/my-vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script>$('#tag_list').select2();</script>
     <script src="/js/app.js"></script>
     <script src="/js/my-js.js"></script>
-    <script src="/js/my-vue.js"></script>
 </body>
 </html>
