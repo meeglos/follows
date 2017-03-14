@@ -62,14 +62,18 @@
         {{--</div>--}}
         @if(count($tasks) > 0)
             @foreach($tasks as $task)
-                <div class="panel panel-default" style="margin-bottom: 5px;">
-                    <div class="panel-body" style="padding-top: 8px; padding-bottom: 8px;">
+                <div class="panel panel-default mr-mg-bottom">
+                    <div class="panel-body mr-item-padding">
                         <a href="{{ $task->url }}" data-toggle="tooltip" data-html="true" data-placement="bottom" title="{{ $task->tooltip }}">
                             {{ str_limit($task->description, 80) }} &nbsp;&bullet;&nbsp; Creado por {{ $task->user->name }} {{ $task->dif }}
                         </a>
                         <span class="badge">{{ $task->count }}</span>
                         <span class="pull-right">{!! $task->status !!}</span>
-                        <span class="label-info">{{ $task->user->name }} lo está revisando.</span>
+                        <div id="working">
+                            <user-list>
+                                <user></user>
+                            </user-list>
+                        </div>
                     </div>
                 </div>
             @endforeach

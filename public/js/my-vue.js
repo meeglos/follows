@@ -1,10 +1,6 @@
-new Vue({
-    el: '#app-root',
-    data: {
-        skills: []
-    },
-
-    mounted() {
-        axios.get('/skills').then(response => this.skills = response.data);
-    }
+Vue.component('user-list', {
+    template: '<span class="label label-info">User1</span>'
 });
+new Vue({
+    el: '#working'
+})
