@@ -13,6 +13,9 @@
 /*
  * font-family: 'Open Sans Condensed', sans-serif;
  * font-family: 'Lato', sans-serif;
+ * font-family: 'Anaheim', sans-serif;
+ * font-family: 'Chathura', sans-serif;
+ * font-family: 'Abel', sans-serif;
 */
 
 .show-header {
@@ -136,30 +139,33 @@
 .tag-bg {
     /*margin-top: 1px;*/
     font-weight: 100;
-    padding: 5px 12px;
+    padding: 4px 12px;
     font-size: small;
     margin-bottom: 0px;
 }
-.tag-bg-ok {
-    background-color: #5e8736;
-}
-.tag-bg-ko {
-    background-color: #BB0000;
-}
 .tt-main {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Anaheim', sans-serif;
     letter-spacing: 0.05em;
-    font-size: .9em;
+    font-size: 1em;
 }
 .tt-title {
+    letter-spacing: 0.02em;
+    font-weight: lighter;
     color: #00f5f5;
-    font-size: .8em;
+    font-family: 'Abel', sans-serif;
+    font-size: 0.9em;
 }
 .tt-details {
     color: #f0fefa;
-    font-size: .8em;
+    font-weight: 100;
+    font-size: 0.9em;
+    font-family: 'Abel', sans-serif;
 }
-
+.dotted {
+    border-top: 1px dotted #8c8b8b;
+    margin: 0 0 -1em;
+    padding: 0;
+}
 .btn-mr-sp {
     margin-left: .5em;
 }

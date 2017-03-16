@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-9">
 
-                <a role="button" class="btn btn-sm btn-danger pull-right btn-mr-sp" href="create" aria-label="Left Align">Agregar registro
+                <a role="button" class="btn btn-sm btn-primary pull-right btn-mr-sp" href="create" aria-label="Left Align">Agregar registro
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </a>
                 <!-- Split button -->
@@ -69,11 +69,11 @@
                         </a>
                         <span class="badge">{{ $task->count }}</span>
                         <span class="pull-right">{!! $task->status !!}</span>
-                        <div id="working">
-                            <user-list>
-                                <user></user>
-                            </user-list>
-                        </div>
+                        {{--<div id="working">--}}
+                            {{--<user-list>--}}
+                                {{--<user></user>--}}
+                            {{--</user-list>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             @endforeach
