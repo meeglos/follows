@@ -29,19 +29,20 @@ $navbar-default-bg: #fff;
 $btn-default-color: darken($brand-primary, 10%);
 
 // Inputs
-$input-border: lighten($text-color, 40%);
+$input-border: lighten($brand-primary, 30%);
 $input-border-focus: lighten($brand-primary, 25%);
 $input-color-placeholder: lighten($text-color, 30%);
+$input-group-addon-bg: $brand-primary !default;
+$input-color: $brand-info !default;
 
 // Panels
 $panel-default-heading-bg: #fff;
 
 // Link color
-$link-color:            darken($brand-primary, 10%) !default;
+$link-color:            darken($brand-primary, 20%) !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 30%) !default;
+$link-hover-color:      darken($link-color, 20%) !default;
 //** Link hover decoration.
 $link-hover-decoration: none !default;
-
 
 $pagination-color:                     $link-color !default;

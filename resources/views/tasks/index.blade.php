@@ -16,8 +16,8 @@
                 </a>
                 <!-- Split button -->
                 <div class="btn-group btn-group-sm pull-right btn-mr-sp">
-                    <button type="button" class="btn btn-info">Mostrar</button>
-                    <button type="button" class="btn btn-info  btn-smdropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-primary">Mostrar</button>
+                    <button type="button" class="btn btn-primary  btn-smdropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
@@ -33,8 +33,8 @@
                     </ul>
                 </div>
                 <div class="btn-group btn-group-sm pull-right btn-mr-sp">
-                    <button type="button" class="btn btn-info btn-sm">Agrupar</button>
-                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-primary btn-sm">Agrupar</button>
+                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="input-group input-group-sm">
                     <span class="input-group-addon" id="basic-addon1">Buscar</span>
-                    <input type="text" class="form-control" placeholder="Inserta el contenido de tu búsqueda" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control mr-addon" placeholder="Inserta el contenido de tu búsqueda" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>
