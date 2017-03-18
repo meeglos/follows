@@ -31,6 +31,11 @@ Route::get('tags/index', [
     'as' => 'tags.index',
 ]);
 
+Route::post('tasks/{task}/posts', [
+    'uses' => 'PostController@store',
+    'as' => 'posts.store',
+]);
+
 Route::get('skills', function () {
     return ['Laravel', 'Vue', 'PHP', 'JavaScript', 'Tooling'];
 });

@@ -25,7 +25,12 @@ class Task extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class)->withTimestamps();
+        return $this->belongsToMany(Tag::class);
+    }
+
+   public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 
     public function setDescriptionAttribute($value)

@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $fillable = [
-        'comments'
+        'comments', 'user_id', 'task_id'
     ];
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
-    public function post()
+    public function task()
     {
-        $this->belongsTo(Task::class);
+        return $this->belongsTo(Task::class);
     }
 
     public function getDiffAttribute()

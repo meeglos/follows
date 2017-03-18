@@ -21,7 +21,7 @@
                 <p><span class="post-details-title">Nombre del contacto:</span> {{ $task->client_name }}</p>
             </section>
         </section>
-
+{{ dd($task->posts) }}
         @if($task->posts)
             <ol id="lista2">
                 @foreach($task->posts as $post)
@@ -40,12 +40,12 @@
 
         <div class="panel panel-default">
             <div class="panel-body">
-                <form method="post" action="/tasks/{{ $task->id }}/follows">
+                <form method="post" action="/tasks/{{ $task->id }}/posts">
 
                     {{ csrf_field() }}
 
                     <div class="form-group">
-                        {!! Field::textarea('comments', ['label' => 'Descripción de seguimiento', 'rows' => '3', 'placeholder' => 'Descripción del seguimiento al cliente aquí']) !!}
+                        {!! Field::textarea('comments', ['label' => 'Descripción de seguimiento', 'class' => 'mr-addon', 'rows' => '3', 'placeholder' => 'Descripción del seguimiento al cliente aquí']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::submit('Guardar', ['class'=> 'btn btn-primary form-control']) !!}
