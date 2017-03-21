@@ -44,6 +44,13 @@ class Task extends Model
         return $this->tags->pluck('id')->toArray();
     }
 
+    public function getCountAttribute()
+    {
+        $total = $this->posts()->count();
+
+        return ($total > 0 ? $total : 'Sin llamadas.');
+
+    }
     public function getUrlAttribute()
     {
         return route('tasks.show', [$this->id, $this->slug]);

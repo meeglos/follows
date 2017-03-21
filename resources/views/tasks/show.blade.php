@@ -16,17 +16,21 @@
 
             </section>
             <section class="col-md-6 post-details-right">
-                <p><span class="post-details-title">ID del cliente:</span> {{ $task->client_code }}</p>
-                <p><span class="post-details-title">Contacto del cliente:</span> {{ $task->client_phone }}</p>
-                <p><span class="post-details-title">Nombre del contacto:</span> {{ $task->client_name }}</p>
+                <dl class="dl-horizontal">
+                    <dt>ID del cliente</dt>
+                    <dd>{{ $task->client_code }}</dd>
+                    <dt>Contacto cliente</dt>
+                    <dd>{{ $task->client_phone }}</dd>
+                    <dt>Nombre del contacto</dt>
+                    <dd>{{ $task->client_name }}</dd>
+                </dl>
             </section>
         </section>
-{{ dd($task->posts) }}
-        @if($task->posts)
+        @if(!$task->posts->isEmpty())
             <ol id="lista2">
                 @foreach($task->posts as $post)
                     <li>
-                        <p class="follow-header"><span class="follow-author">{{ $post->user->name }}</span> &#8226; {{ $post->dif }}</p>
+                        <p class="follow-header"><span class="follow-author">{{ $post->user->name }}</span> &#8226; {{ $post->diff }}</p>
                         <p class="follow-comment">{{ $post->comments }}</p>
                     </li>
                 @endforeach
